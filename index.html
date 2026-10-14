@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#0b0d12">
+  <meta name="description" content="Pixel Vault — игры, игровая валюта и цифровые подарки.">
+  <title>Pixel Vault — территория игр</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <div class="announcement">
+    <span class="announcement-dot"></span>
+    Больше игр — больше впечатлений. <a href="#catalog">Выбрать игру <span aria-hidden="true">↗</span></a>
+  </div>
+
+  <header class="site-header">
+    <a class="brand" href="#" aria-label="Pixel Vault — на главную">
+      <span class="brand-mark" aria-hidden="true">P<span>✳</span></span>
+      <span>pixel<span class="brand-light">vault</span></span>
+    </a>
+
+    <button class="mobile-menu-toggle icon-button" type="button" aria-label="Открыть меню" aria-expanded="false">
+      <span></span><span></span>
+    </button>
+
+    <nav class="main-nav" id="main-nav" aria-label="Основная навигация">
+      <a class="nav-link active" href="#catalog">Игры</a>
+      <a class="nav-link" href="#donate">Донат</a>
+      <a class="nav-link" href="#benefits">О магазине</a>
+    </nav>
+
+    <div class="header-actions">
+      <button class="header-wallet" type="button" data-open-account>
+        <span class="wallet-icon" aria-hidden="true">◈</span>
+        <span id="header-balance">0 ₸</span>
+      </button>
+      <button class="icon-button account-button" type="button" aria-label="Личный кабинет" data-open-account>♙</button>
+      <button class="icon-button cart-button" id="cart-button" type="button" aria-label="Открыть корзину" data-open-cart>
+        <span aria-hidden="true">▱</span><span class="cart-count" id="cart-count">0</span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero page-shell" aria-labelledby="hero-title">
+      <div class="hero-copy">
+        <div class="eyebrow"><span class="eyebrow-line"></span> ТВОЯ СЛЕДУЮЩАЯ ИГРА ЖДЁТ</div>
+        <h1 id="hero-title">Больше игр.<br><span>Меньше правил.</span></h1>
+        <p>Культовые миры, новые релизы и цифровые подарки — собрали всё, ради чего стоит включить консоль.</p>
+        <div class="hero-actions">
+          <a class="button button-primary" href="#catalog">Исследовать каталог <span aria-hidden="true">↗</span></a>
+          <a class="text-link" href="#donate">Пополнить игровой баланс <span aria-hidden="true">→</span></a>
+        </div>
+        <div class="hero-proof">
+          <div class="avatar-stack" aria-hidden="true"><span>G</span><span>J</span><span>M</span><span>+</span></div>
+          <span><strong>12 000+</strong> игроков уже с нами</span>
+        </div>
+      </div>
+
+      <div class="hero-art" aria-label="Игровые миры в Pixel Vault">
+        <div class="hero-orbit orbit-one"></div>
+        <div class="hero-orbit orbit-two"></div>
+        <div class="hero-spark spark-one">✦</div>
+        <div class="hero-spark spark-two">✧</div>
+        <div class="hero-art-label"><span class="live-dot"></span> НОВЫЕ МИРЫ УЖЕ ЗДЕСЬ</div>
+        <div class="hero-game-card game-card-back"><span>LEVEL<br>UP</span></div>
+        <div class="hero-game-card game-card-front">
+          <img src="https://images.unsplash.com/photo-1511512578047-dfb367046420?auto=format&fit=crop&w=760&q=85" alt="Игровой мир с неоновым освещением">
+          <div class="hero-card-shade"></div>
+          <div class="hero-card-content"><span class="hero-card-tag">ВЫБОР РЕДАКЦИИ</span><strong>Play<br>your way.</strong><span class="card-discover">Открыть каталог <span>↗</span></span></div>
+        </div>
+        <div class="floating-chip chip-rating">★ <strong>4.9</strong> рейтинг</div>
+        <div class="floating-chip chip-games"><strong>240+</strong><span>игр в каталоге</span></div>
+      </div>
+      <div class="hero-index"><span>01</span><i></i><span>03</span></div>
+    </section>
+
+    <section class="benefits page-shell" id="benefits" aria-label="Преимущества магазина">
+      <div class="benefit"><span class="benefit-icon">↗</span><div><strong>Моментальная доставка</strong><span>Ключ появится сразу после покупки</span></div></div>
+      <div class="benefit"><span class="benefit-icon">◈</span><div><strong>Проверенные продавцы</strong><span>Только надёжные поставщики</span></div></div>
+      <div class="benefit"><span class="benefit-icon">⌘</span><div><strong>Поддержка 24/7</strong><span>Всегда готовы помочь</span></div></div>
+    </section>
+
+    <section class="catalog-section page-shell" id="catalog">
+      <div class="section-heading">
+        <div>
+          <div class="eyebrow"><span class="eyebrow-line"></span> ТВОЙ СЛЕДУЮЩИЙ УРОВЕНЬ</div>
+          <h2>Найди свою <span>игру</span></h2>
+        </div>
+        <div class="catalog-note"><span class="note-spark">✳</span> Классика, хиты и то, о чём<br>завтра будут говорить все.</div>
+      </div>
+
+      <div class="category-row" aria-label="Популярные категории">
+        <button class="category-chip selected" type="button" data-genre="Все игры">Все игры <span>17</span></button>
+        <button class="category-chip" type="button" data-genre="Экшен">Экшен</button>
+        <button class="category-chip" type="button" data-genre="Приключения">Приключения</button>
+        <button class="category-chip" type="button" data-genre="RPG">RPG</button>
+        <button class="category-chip" type="button" data-genre="Инди">Инди</button>
+        <button class="category-chip" type="button" data-genre="Гонки">Гонки</button>
+        <button class="category-chip" type="button" data-genre="Спорт">Спорт</button>
+        <a class="all-categories" href="#catalog">Все категории <span>→</span></a>
+      </div>
+
+      <div class="catalog-toolbar">
+        <label class="search-box">
+          <span aria-hidden="true">⌕</span>
+          <input id="search-input" type="search" placeholder="Название игры..." autocomplete="off" aria-label="Поиск по названию игры">
+          <kbd>⌘ K</kbd>
+        </label>
+        <div class="filter-controls">
+          <label class="select-wrap"><span class="sr-only">Год выпуска</span><select id="year-filter"><option value="">Все годы</option></select><span>⌄</span></label>
+          <label class="select-wrap"><span class="sr-only">Разработчик</span><select id="developer-filter"><option value="">Все студии</option></select><span>⌄</span></label>
+          <label class="select-wrap"><span class="sr-only">Жанр</span><select id="genre-filter"><option value="">Все жанры</option></select><span>⌄</span></label>
+          <label class="price-filter"><span>До</span><input id="price-filter" type="number" min="0" placeholder="Цена" aria-label="Максимальная цена"><span>₸</span></label>
+          <label class="select-wrap sort-wrap"><span class="sr-only">Сортировка</span><select id="sort-select"><option value="popular">Популярные</option><option value="price-asc">Сначала дешевле</option><option value="price-desc">Сначала дороже</option><option value="date-desc">Сначала новинки</option><option value="date-asc">Сначала старые</option></select><span>⌄</span></label>
+        </div>
+      </div>
+      <div class="results-line"><span id="results-count">Найдено 0 игр</span><button type="button" class="reset-filters" id="reset-filters">Сбросить фильтры <span>↺</span></button></div>
+      <div class="product-grid" id="product-grid" aria-live="polite"></div>
+      <div class="empty-state hidden" id="empty-state"><span>◌</span><h3>Игра не найдена</h3><p>Попробуй изменить параметры поиска или сбросить фильтры.</p><button class="button button-secondary" type="button" id="empty-reset">Сбросить фильтры</button></div>
+      <div class="catalog-footer"><span>Показаны игры из нашей коллекции</span><button class="button button-outline" type="button" id="show-more">Показать ещё <span>↓</span></button></div>
+    </section>
+
+    <section class="donate-section" id="donate">
+      <div class="donate-shell page-shell">
+        <div class="donate-copy">
+          <div class="eyebrow"><span class="eyebrow-line"></span> БЫСТРО. УДОБНО. В ИГРЕ.</div>
+          <h2>Твой прогресс.<br><span>Твои правила.</span></h2>
+          <p>Пополняй баланс любимых игр и забирай редкие скины, боевые пропуски и всё, что делает игру твоей.</p>
+          <div class="donate-perks"><span><i>✓</i> Безопасная оплата</span><span><i>✓</i> Пополнение за минуту</span></div>
+        </div>
+        <form class="topup-card" id="topup-form">
+          <div class="topup-heading"><div><span class="topup-kicker">ИГРОВАЯ ВАЛЮТА</span><h3>Пополнение баланса</h3></div><span class="topup-symbol">◈</span></div>
+          <label class="form-label" for="game-select">Выбери игру</label>
+          <div class="game-select-wrap"><span id="selected-game-icon">◉</span><select id="game-select"><option value="Genshin Impact">Genshin Impact</option><option value="Valorant">Valorant</option><option value="Fortnite">Fortnite</option><option value="PUBG Mobile">PUBG Mobile</option></select><span>⌄</span></div>
+          <span class="form-label">Выбери набор</span>
+          <div class="coin-options" id="coin-options"></div>
+          <div class="payment-summary"><span>К оплате</span><strong id="topup-price">—</strong></div>
+          <button class="button button-primary topup-submit" type="submit">Перейти к оплате <span>→</span></button>
+          <p class="secure-note">⌑ Оплата списывается с кошелька Pixel Vault.</p>
+        </form>
+      </div>
+      <div class="donate-decoration decoration-left">✳</div><div class="donate-decoration decoration-right">✧</div>
+    </section>
+
+    <section class="newsletter page-shell">
+      <div><span class="eyebrow"><span class="eyebrow-line"></span> НЕ ПРОПУСТИ ДРОП</span><h2>Играй в курсе.</h2><p>Подпишись на новости, скидки и свежие релизы.</p></div>
+      <form id="newsletter-form" class="newsletter-form"><label class="sr-only" for="newsletter-email">Ваш email</label><input id="newsletter-email" type="email" placeholder="Твой email" required><button type="submit" aria-label="Подписаться">→</button></form>
+    </section>
+  </main>
+
+  <footer class="site-footer page-shell">
+    <a class="brand footer-brand" href="#"><span class="brand-mark">P<span>✳</span></span><span>pixel<span class="brand-light">vault</span></span></a>
+    <span>Твоя территория игр. © <span id="current-year"></span> Pixel Vault</span>
+    <div><a href="#catalog">Каталог</a><a href="#donate">Поддержка</a><a href="#benefits">О нас</a></div>
+  </footer>
+
+  <div class="overlay" id="overlay"></div>
+  <aside class="side-panel cart-panel" id="cart-panel" aria-label="Корзина" aria-hidden="true">
+    <div class="panel-heading"><div><span class="panel-kicker">ТВОИ ПОКУПКИ</span><h2>Корзина <span id="panel-cart-count">0</span></h2></div><button class="close-button" type="button" data-close aria-label="Закрыть">×</button></div>
+    <div class="cart-items" id="cart-items"></div>
+    <div class="cart-empty" id="cart-empty"><span>▱</span><h3>Пока пусто</h3><p>Самое время найти игру по душе.</p><button type="button" class="button button-secondary" data-close>В каталог</button></div>
+    <div class="cart-summary hidden" id="cart-summary"><div class="cart-total"><span>Итого</span><strong id="cart-total">0 ₸</strong></div><button class="button button-primary checkout-button" type="button" id="checkout-button">Оплатить с кошелька <span>→</span></button><p>Стоимость заказа спишется с баланса кошелька.</p></div>
+  </aside>
+
+  <section class="modal" id="quick-modal" role="dialog" aria-modal="true" aria-labelledby="quick-title" aria-hidden="true">
+    <button class="close-button modal-close" type="button" data-close aria-label="Закрыть">×</button><div class="quick-content" id="quick-content"></div>
+  </section>
+
+  <section class="modal account-modal" id="account-modal" role="dialog" aria-modal="true" aria-labelledby="account-title" aria-hidden="true">
+    <button class="close-button modal-close" type="button" data-close aria-label="Закрыть">×</button>
+    <div class="account-heading"><span class="account-avatar">♙</span><div><span class="panel-kicker">ТВОЙ ПРОФИЛЬ</span><h2 id="account-title">Личный кабинет</h2></div></div>
+    <div class="account-balance"><span>Баланс кошелька</span><strong id="account-balance">0 ₸</strong><span>Можно использовать для покупок в магазине</span></div>
+    <form id="wallet-form" class="wallet-form"><label class="form-label" for="wallet-amount">Пополнить кошелёк</label><div><input id="wallet-amount" type="number" min="1000" max="50000" step="1000" placeholder="От 1 000 до 50 000 ₸" required><button class="button button-primary" type="submit">Пополнить</button></div><p class="wallet-limit" id="wallet-limit">Лимит баланса — 50 000 ₸.</p></form>
+    <div class="order-history"><h3>История заказов</h3><div id="order-list"></div></div>
+  </section>
+
+  <div class="toast-region" id="toast-region" aria-live="polite"></div>
+</body>
+</html>
